@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The value of wandering</title>
+    <style type="text/css">
+        
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .col-1 {
+            position: relative;
+            width: 390px;
+            height: 700px;
+            background-color: white;
+            margin-bottom: 100px;
+            overflow: hidden; /* 이미지가 넘칠 경우를 방지하기 위해 추가 */
+        }
+
+        .col-1 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 이미지가 비율 유지하면서 div를 가득 채우도록 함 */
+        }
+
+        .col-2 {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            z-index: 1; /* col-2가 col-3, col-4 위에 올라가도록 설정 */
+        }
+
+        p {
+            color: white;
+            font-weight: bold;
+            font-family: 'Pretendard-Regular';
+            text-align: center;
+            line-height: 1.5;
+            font-size: 15px;
+            margin: 0;
+            margin-top: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="col-1">
+            <img src="bolzano.jpg" alt="Bolzano">
+            <div class="col-2">
+                <p>전날 숙소 근처에서 찍은 사진</p>
+            </div>
+            <div class="col-3">
+                <img src="click2.jpg" alt="Click2">
+            </div>
+            <div class="col-4">
+                <img src="click1.jpg" alt="Click1">
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

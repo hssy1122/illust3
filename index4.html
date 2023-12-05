@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The value of wandering</title>
+    <style type="text/css">
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .col-1 {
+            position: relative;
+            width: 390px;
+            height: 700px;
+            background-color: white;
+            margin-bottom: 100px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .col-1 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .col-2 {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            z-index: 1;
+        }
+
+       p {
+            color: white;
+            font-weight: bold;
+            font-family: 'Pretendard-Regular';
+            text-align: center;
+            line-height: 1.5;
+            font-size: 15px;
+            margin: 0;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="col-1" onclick="changeContent()">
+        <img id="image1" src="this6.jpg">
+        <div class="col-2">
+            <p id="text">차에서 내렸을 때 바로 볼 수 있는 풍경 <br>사람이 없이 차만 다니는 곳이라 무섭다</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    var imageIndex = 1; // Initial image index
+
+    function changeContent() {
+        var image1 = document.getElementById('image1');
+        var text = document.getElementById('text');
+
+        // Toggle between images based on the current index
+        if (imageIndex === 1) {
+            image1.src = 'this7.jpg';
+            text.innerHTML = '내린 곳에 있던 버스 시간표 <br> 1시간마다 한 대가 온다고 적혀있다';
+            imageIndex = 2; // Set the index for the next click
+        } else if (imageIndex === 3) {
+            image1.src = 'this8.jpg';
+            text.innerHTML = '현지인과 함께 기다렸던 버스에서 내린 후 <br> 산으로 올라갈 수 있는 루트가 적힌 안내도를 봤다';
+            imageIndex = 4; // Set the index for the next click
+        } else if (imageIndex === 2) {
+            image1.src = 'this3.jpg';
+            text.innerHTML = '현지인과 기다리던 버스에 타서 본 풍경 <br> 이색적이다';
+            imageIndex = 3; // Set the index for the next click
+        } else if (imageIndex === 4) {
+            image1.src = 'this2.jpg';
+            text.innerHTML = '버스에서 내리고 또 길을 헤매는 동안 찍은 동생의 사진';
+            imageIndex = 1; // Set the index for the next click
+        }
+    }
+</script>
+
+</body>
+</html>

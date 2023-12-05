@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The value of wandering</title>
+    <style type="text/css">
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .col-1 {
+            position: relative;
+            width: 390px;
+            height: 700px;
+            background-color: white;
+            margin-bottom: 100px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .col-1 img {
+            width: 120%;
+            height: 120%;
+            object-fit: contain;
+            margin-top: -82px;
+            margin-left: -36px;
+        }
+
+        .col-2 img {
+            height: 100%;
+            object-fit: contain;
+            margin-top: 0px;
+        }
+
+        .col-2 {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            z-index: 1;
+        }
+
+        p {
+            color: white;
+            font-weight: bold;
+            font-family: 'Pretendard-Regular';
+            text-align: center;
+            line-height: 1.5;
+            font-size: 15px;
+            margin: 0;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="col-1" onclick="changeContent()">
+        <img id="image1" src="this14.jpg">
+        <div class="col-2">
+            <p id="text">케이블카에서 내리면 보이는 풍경 <br>독특한 모양의 산이 아름답다</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    var imageIndex = 1; // Initial image index
+
+    function changeContent() {
+        var image1 = document.getElementById('image1');
+        var text = document.getElementById('text');
+
+        // Toggle between images based on the current index
+        if (imageIndex === 1) {
+            image1.src = 'this19.jpg';
+            text.innerHTML = '가까이 다가가보면 아찔한 절벽이라는 걸 알 수 있다';
+            imageIndex = 2; // Set the index for the next click
+        } 
+        else if (imageIndex === 2) {
+            image1.src = 'this26.jpg';
+            text.innerHTML = '산으로 향하는 길에 있던 예수 <br> 포토스팟인 것 같았다';
+            imageIndex = 3; // Set the index for the next click
+        } else if (imageIndex === 3) {
+            image1.src = 'this16.jpg';
+            text.innerHTML = '정상에 나름 제대로 된 음식점도 있다';
+            imageIndex = 4; // Set the index for the next click
+        } else if (imageIndex === 4) {
+            image1.src = 'this21.jpg'; // Change this line to show this25.jpg
+            text.innerHTML = '비가 온다는 소식에 <br>케이블 카를 타고 다시 내려가는 길에 찍은 사진';
+             imageIndex = 5; 
+        } else if (imageIndex === 5) {
+            image1.src = 'this25.jpg'; // Change this line to show this25.jpg
+            text.innerHTML = '내려와서 숙소로 돌아가기 전 <br> 산 아래 마을에서 먹은 간식'; imageIndex = 1; // Set the index for the next click
+        }
+    }
+</script>
+
+</body>
+</html>

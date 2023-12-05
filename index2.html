@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The value of wandering</title>
+    <style type="text/css">
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 110vh;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .col-1, .col-2, .col-3, .col-4 {
+            width: 150px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .col-1, .col-3, .col-4 {
+            height: 150px;
+        }
+
+        .col-1{margin-top: 150px;}
+
+        .col-2 {
+            height: 100px;
+        }
+
+        p {
+            color: white;
+            font-weight: bold;
+            font-family: 'Pretendard-Regular';
+            text-align: center;
+            line-height: 1.5;
+            font-size: 15px;
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="col-1" onclick="goToPage('index3.html')">
+            <img src="bolzano.jpg" alt="Bolzano Image">
+        </div>
+        <div class="col-2" onclick="goToPage('index4.html')">
+            <p>볼차노<br>Bolzano</p>
+        </div>
+        <div class="col-3" onclick="goToPage('index4.html')">
+            <img src="this6.jpg" alt="Image 6">
+        </div>
+        <div class="col-2" onclick="goToPage('index5.html')">
+            <p>알 수 없는 도로가<br>Unknown Road</p>
+        </div>
+        <div class="col-4" onclick="goToPage('index5.html')">
+            <img src="this18.jpg" alt="Image 18">
+        </div>
+        <div class="col-2" onclick="goToPage('index6.html')">
+            <p>돌로미티 세체다<br>Dolomiti Seceda</p>
+        </div>
+    </div>
+
+    <script>
+        function goToPage(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>
